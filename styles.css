@@ -1,0 +1,242 @@
+:root {
+  --bg-soft: #f6f8fb;
+  --bg-deep: #0e2030;
+  --card-bg: #ffffff;
+  --text-main: #17212b;
+  --text-muted: #4a5968;
+  --accent: #0f766e;
+  --accent-dark: #0a5a54;
+  --line-soft: #d6dde6;
+  --shadow-soft: 0 14px 35px rgba(19, 38, 56, 0.11);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 8% 12%, rgba(15, 118, 110, 0.1), transparent 32%),
+    radial-gradient(circle at 92% 85%, rgba(14, 32, 48, 0.08), transparent 34%),
+    var(--bg-soft);
+  line-height: 1.6;
+}
+
+.hero-wrapper {
+  min-height: 88vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 7vh 0 5vh;
+  background: linear-gradient(135deg, rgba(14, 32, 48, 0.98), rgba(17, 66, 93, 0.95));
+}
+
+.hero {
+  gap: 2.25rem;
+}
+
+.hero-content {
+  flex: 1 1 56%;
+}
+
+.hero-kicker {
+  margin-bottom: 0.75rem;
+  color: #b8d9d5;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.hero-title {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: #f8fdff;
+  font-size: clamp(2rem, 3.9vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  max-width: 18ch;
+}
+
+.hero-summary {
+  color: #d7e7ef;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  max-width: 60ch;
+  margin-bottom: 1.75rem;
+}
+
+.btn-cta {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: 1px solid transparent;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 12px 24px;
+  min-width: 170px;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background-color: var(--accent-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(10, 90, 84, 0.35);
+}
+
+.hero-metrics {
+  flex: 1 1 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(100%, 420px);
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.metric-value {
+  color: #eaf6ff;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.metric-label {
+  color: #b9cfdb;
+  font-size: 0.94rem;
+}
+
+.projects-section {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.section-head {
+  margin-bottom: 0.9rem;
+}
+
+.section-kicker {
+  margin: 0;
+  color: #2b5f7a;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.section-title {
+  margin: 0.35rem 0 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: clamp(1.65rem, 2.1vw, 2.3rem);
+}
+
+.section-note {
+  margin: 0;
+  max-width: 56ch;
+  color: var(--text-muted);
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: 0 6px 16px rgba(15, 34, 52, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #b9c9d8;
+  box-shadow: var(--shadow-soft);
+}
+
+.project-title {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: 1.22rem;
+}
+
+.project-description {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tech .badge {
+  font-weight: 600;
+  color: #274157;
+  border-color: #c9d4df !important;
+  padding: 7px 10px;
+}
+
+.project-actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.project-actions .btn {
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.view-more-wrap {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.view-more-wrap .btn {
+  min-width: 130px;
+  font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+  .hero-wrapper {
+    min-height: 0;
+    padding-top: 11vh;
+  }
+
+  .hero-metrics {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-wrapper {
+    padding: 10vh 0 7vh;
+  }
+
+  .hero-title {
+    max-width: none;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+}
